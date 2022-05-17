@@ -1,56 +1,26 @@
 <?php
 
-
-    if(isset($_GET['URL'])){
-
-        $url = $_GET['URL'];
-
-    }
-
-    else {$url = '';}
+require 'app/lib/getRoute.php';
 
 
-    class Router{
-
-        public function __construct($route){
 
 
-            
+class Router{
+        public function __construct($route)
+        {
             $this->URL = $route ;
-
-
-
+        
         }
       
 
         public function View(){
-
-
             if($this->URL !==''){
-
-                include 'app/modules/register/'.$this->URL.'.php'  ;
-
-
-            } 
-
-            else {
-
-                return 0;
+                include 'app/modules/'.$this->URL.'/'.$this->URL.'View.php'  ;
+                
 
             }
-
-           ;
-                
-            
-
-
-
-        }
-    
-
-
-
-    }
+            else {return 0;};}
+     }
 
     
 

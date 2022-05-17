@@ -1,16 +1,20 @@
 <?php
-
-require 'app/router.php';
-
-$rout = new Router($url);
-$rout->View();
-
-
-
-
+    include 'includes/header.php';
 ?>
 
-<a href="?URL=SignUp">Registro</a>
+
+<main> 
+<?php
+require 'app/router.php';
+$rout = new Router($url);
+$rout->View();
+?>
+
+
+
+</main>
+
+
 
 
 <?php
