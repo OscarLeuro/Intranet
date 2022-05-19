@@ -1,4 +1,12 @@
 
+<?php
+
+require 'app/lib/getRoute.php';
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +24,16 @@
 
 <nav class="row padding-y-1 bg-g-platinum">
 
-    <a class="btn btn-dark" href="register">Registro</a>
-    <a href="login" class="btn btn-dark">Ingresar</a>
-    <a href="planes" class="btn btn-dark">Planes</a>
+    <a class="btn <?php activeLink($url,'register') ?>" href="register">Registro</a>
+
+
+    <a href="login" class="btn <?php activeLink($url,'login') ?>">Ingresar</a>
+
+
+    <a href="planes" class="btn <?php activeLink($url,'planes') ?>">Planes</a>
+
+
+
+    <a href="dashboard" class="btn <?php activeLink($url,'dashboard') ?>">Dashboard</a>
 
 </nav>

@@ -1,7 +1,6 @@
 <?php
 
-require 'app/lib/create.php';
-require 'app/lib/getRoute.php';
+
 require 'loginModel.php';
 
 

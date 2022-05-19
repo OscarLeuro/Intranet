@@ -1,24 +1,18 @@
 <?php
     include 'includes/header.php';
-?>
-
-
-<main> 
-<?php
-require 'app/router.php';
-$rout = new Router($url);
-$rout->View();
-?>
-
-
-
-</main>
-
-
-
-
-<?php
-
-
+    require 'app/router.php';
 
 ?>
+
+
+<main class="padding-2"> 
+
+        <?php Router::View($url);?>
+
+    </main>
+
+
+
+
+
+

@@ -3,7 +3,7 @@
 
 
 
-
+include 'app/lib/create.php';
 
 
 class registerModel{
@@ -16,6 +16,14 @@ class registerModel{
         $data = null;
 
         if($action == 'crear'){
+
+
+            $user = $_POST['prueba'];
+
+            $sql = "INSERT INTO prueba(USER) VALUES('$user')";
+            $query = mysqli_query($conn,$sql);
+
+
 
                  $data = ['nombre' => 'Oscar Leuro', 'edad' => 26] ;
 

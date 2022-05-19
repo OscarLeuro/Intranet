@@ -10,7 +10,7 @@ if(isset($_POST['action'])){
 else {$action = "";}
 
 
-
+$conn = $connect;
 
 
 

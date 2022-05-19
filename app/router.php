@@ -1,29 +1,37 @@
 <?php
 
-require 'app/lib/getRoute.php';
+
 
 
 
 
 class Router{
-        public function __construct($route)
+
+    public $URL = "hola";
+        public function __construct()
         {
-            $this->URL = $route ;
+         
         
         }
       
 
-        public function View(){
-            if($this->URL !==''){
-                include 'app/modules/'.$this->URL.'/'.$this->URL.'View.php'  ;
+        public function View($url){
+            if($url !==''){
+                include 'app/modules/'.$url.'/'.$url.'View.php'  ;
                 
-
+               
             }
             else {return 0;};}
+
+
+   
+        
+
+
      }
 
     
-
+   
 
 
 

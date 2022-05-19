@@ -11,5 +11,11 @@ else {$url = '';}
 
 
 
+function activeLink($url, $slug){
+        if($url == $slug){
+                echo 'btn-dark';
+        }
+    }
+
 
 ?>

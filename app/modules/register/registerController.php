@@ -1,8 +1,8 @@
 <?php
 
-    require 'app/lib/getRoute.php';
+
     include 'registerModel.php';
-    require 'app/lib/create.php';
+   
     
 
     class registerController{
