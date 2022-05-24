@@ -2,17 +2,19 @@
 
 
 
-
-include 'app/lib/create.php';
+include 'app/lib/config/connect.php';
+include 'app/lib/actions.php';
 
 
 class registerModel{
     
+    private $SQL;
     
 
 
     public function CreateRegister($action){
         
+        include 'app/lib/config/connect.php';
         $data = null;
 
         if($action == 'crear'){
@@ -21,14 +23,10 @@ class registerModel{
             $user = $_POST['prueba'];
 
             $sql = "INSERT INTO prueba(USER) VALUES('$user')";
-            $query = mysqli_query($conn,$sql);
+            mysqli_query($connect,$sql);
 
 
 
-                 $data = ['nombre' => 'Oscar Leuro', 'edad' => 26] ;
-
-       
-                 return $data;
                                  }
 
                                
@@ -38,6 +36,24 @@ class registerModel{
 
     }
 
+
+
+public function readData(){
+
+
+    include 'app/lib/config/connect.php';
+    
+
+    $data= [];
+    $SQL = 'SELECT * FROM prueba';
+    $QUERY = mysqli_query($connect,$SQL);
+   
+    return $QUERY;
+
+
+
+
+}
 
 }
 

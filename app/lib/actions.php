@@ -1,6 +1,6 @@
 <?php
 
-require 'config/connect.php';
+
 
 
 if(isset($_POST['action'])){
@@ -10,7 +10,7 @@ if(isset($_POST['action'])){
 else {$action = "";}
 
 
-$conn = $connect;
+
 
 
 

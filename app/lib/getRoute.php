@@ -1,5 +1,6 @@
 <?php
 
+//**Contiene las variables pasadas por la URL para el Routeador como para las acciones */
 
 
 

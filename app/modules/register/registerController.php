@@ -16,10 +16,19 @@
 
   
 
-        public function data($action){
+        public function action($action){
 
           
             return registerModel::CreateRegister($action);
+
+            
+
+        }
+
+        public function data(){
+
+          
+            return registerModel::readData();
 
             
 
