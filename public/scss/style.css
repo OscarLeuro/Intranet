@@ -11,6 +11,23 @@
 }
 
 
+.modal{display: flex;
+      position: fixed;
+      transition: all 0.3s;
+      justify-content: center;
+      top: 0;
+      height: 100vh;
+      transform: scale(0%);
+      background: rgba(0, 0, 0, 0.299);
+      padding: 2rem;}
+
+  .modal__body{background: white;
+      padding: 1rem;
+        width: 50%;
+        border-radius: 25px;
+              }
+
+
 .activeLink{background: red !important}
 
 p, h1, h2, h3, h4, h5, h6, span, p, a, label {

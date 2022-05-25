@@ -8,18 +8,37 @@
     class registerController{
 
 
-        public function __construct()
-        {
-            
-        }
-
-
   
 
         public function action($action){
 
           
-            return registerModel::CreateRegister($action);
+            if($action =='crear'){
+
+                header('Location:register');
+                return registerModel::CreateRegister($action);
+
+                
+
+            }
+
+            elseif($action == 'editar'){
+
+                include 'app/lib/session.php';
+                return registerModel::EditRegister($id);
+
+
+            }
+            elseif($action == 'eliminar'){
+
+                include 'app/lib/session.php';
+                return registerModel::Delete($action); 
+
+
+            }
+            
+
+            
 
             
 

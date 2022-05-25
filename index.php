@@ -9,9 +9,12 @@
 
         <?php Router::View($url);?>
 
-    </main>
+</main>
 
 
+
+<script src="public/js/frame.js"></script>
+<script src="public/js/modal.js"></script>
 
 
 <?php
