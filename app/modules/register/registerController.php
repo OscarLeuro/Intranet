@@ -2,6 +2,8 @@
 
 
     include 'registerModel.php';
+    require 'app/lib/session.php';
+    include 'app/lib/actions.php';
    
     
 
@@ -16,7 +18,7 @@
             if($action =='crear'){
 
                 header('Location:register');
-                return registerModel::CreateRegister($action);
+                return registerModel::Create($action);
 
                 
 
@@ -25,14 +27,21 @@
             elseif($action == 'editar'){
 
                 include 'app/lib/session.php';
-                return registerModel::EditRegister($id);
+                return registerModel::Edit($id);
 
 
             }
             elseif($action == 'eliminar'){
 
-                include 'app/lib/session.php';
+              
                 return registerModel::Delete($action); 
+
+
+            }
+            elseif($action == 'guardar'){
+
+                include 'app/lib/session.php';
+                return registerModel::Edit($id);
 
 
             }
@@ -44,10 +53,10 @@
 
         }
 
-        public function data(){
+        public function data($id){
 
           
-            return registerModel::readData();
+            return registerModel::Read($id);
 
             
 

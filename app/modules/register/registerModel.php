@@ -3,16 +3,13 @@
 
 
 
-include 'app/lib/actions.php';
-
-
 class registerModel{
     
    
     
 
 
-    public function CreateRegister($action){
+    public function Create($action){
         
         include 'app/lib/config/connect.php';
 
@@ -29,17 +26,25 @@ class registerModel{
     
     
     
-    public function readData(){
+    public function Read($id){
     include 'app/lib/config/connect.php';
+
+
+    if(isset($id)){
+
+        $SQL = "SELECT * FROM prueba WHERE ID = '$id'";
+
+    } 
+    else{$SQL = 'SELECT * FROM prueba ORDER BY ID DESC';}
   
-    $SQL = 'SELECT * FROM prueba ORDER BY ID DESC';
+    
     $QUERY = mysqli_query($connect,$SQL);
     return $QUERY;}
 
 
 
 
-    public function EditRegister($id){
+    public function Edit($id){
 
         include 'app/lib/config/connect.php';
       

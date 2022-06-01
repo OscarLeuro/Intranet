@@ -2,8 +2,12 @@
 
 <?php
     include 'registerController.php';
+   
     registerController::action($action);
-    $data = registerController::data();
+    $data = registerController::data(null);
+    $dataEdit = registerController::data($id);
+ 
+   
 ?>
 
 
@@ -78,6 +82,72 @@
 
 
         </div>
+
+
+    </div>
+    
+    <div class="row">
+
+
+    <?php 
+    
+
+while($row = mysqli_fetch_array($dataEdit)){?>
+
+ <table class="table table-blue ">
+
+    <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Actions</th>
+         
+     </thead>
+
+    <tbody>
+
+     <tr> 
+     <td> <?= $row['ID']?> </td>
+    
+     <td> <div class="input-group">
+
+     <input type="text" value="<?= $row['USER'] ?>" name="USER">
+
+     </div> </td>
+
+     <td><form action="register" method="POST">
+
+        <input type="hidden" name="action" value="guardar">
+        <input type="hidden" name="ID" value="<?=$row['ID']?>">
+
+        <input type="submit" value="Editar">
+
+     </form>
+
+     <form action="register" method="POST">
+
+        <input type="hidden" name="action" value="eliminar">
+        <input type="hidden" name="ID" value="<?=$row['ID']?>">
+
+        <input type="submit" value="Delete">
+
+     </form>
+    
+    </td>
+
+
+     </tr>
+
+    </tbody>
+
+
+ </table>
+
+
+
+
+
+<?php	} ?>
+
 
 
     </div>

@@ -1,6 +1,7 @@
 <?php
     include 'includes/header.php';
     require 'app/router.php';
+    
 
 ?>
 

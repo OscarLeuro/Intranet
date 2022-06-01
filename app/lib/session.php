@@ -1,13 +1,16 @@
 <?php
 
 
+/**Archivo encargado de generar los ID de registros, sesiones de usuarios y roles. */
+
+
     $id = "";
 
 
-    if(isset($_GET['ID'])){
+    if(isset($_POST['ID'])){
 
 
-        $id = $_GET['ID'];
+        $id = $_POST['ID'];
 
 
     }
