@@ -5,7 +5,7 @@
    
     registerController::action($action);
     $data = registerController::data(null);
-    $dataEdit = registerController::data($id);
+   
  
    
 ?>
@@ -46,12 +46,12 @@
             
              <td> <?= $row['USER'] ?></td>
 
-             <td><form action="register" method="POST">
+             <td><form action="modal.php" method="POST" id="action_form">
 
-                <input type="hidden" name="action" value="Editar">
-                <input type="hidden" name="ID" value="<?=$row['ID']?>">
+                <input type="hidden" name="action" value="Editar" >
+                <input type="hidden" name="ID" value="<?=$row['ID']?>" id="id_value">
 
-                <input type="submit" value="Editar">
+                <input type="submit" value="Editar" class="editModal">
 
              </form>
 
@@ -86,71 +86,44 @@
 
     </div>
     
-    <div class="row">
+       <div class="row">
 
 
-    <?php 
+              <div class="modal" >
+
+      
+               
+
+
+ 
+
+                     <div class="modal__body" >
+
+                     <div class="modal__title bg-blue padding-y-1" > <h3>Editar Registro</h3> <button class="modal__close">X</button></div>
+
+
+                     <div class="modal__content" id="container_ajax">
+
+
+
+                     </div>
+
+
+
+                     </div>
+
+
+
+
+           
+            
     
 
-while($row = mysqli_fetch_array($dataEdit)){?>
-
- <table class="table table-blue ">
-
-    <thead>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Actions</th>
-         
-     </thead>
-
-    <tbody>
-
-     <tr> 
-     <td> <?= $row['ID']?> </td>
-    
-     <td> <div class="input-group">
-
-     <input type="text" value="<?= $row['USER'] ?>" name="USER">
-
-     </div> </td>
-
-     <td><form action="register" method="POST">
-
-        <input type="hidden" name="action" value="guardar">
-        <input type="hidden" name="ID" value="<?=$row['ID']?>">
-
-        <input type="submit" value="Editar">
-
-     </form>
-
-     <form action="register" method="POST">
-
-        <input type="hidden" name="action" value="eliminar">
-        <input type="hidden" name="ID" value="<?=$row['ID']?>">
-
-        <input type="submit" value="Delete">
-
-     </form>
-    
-    </td>
-
-
-     </tr>
-
-    </tbody>
-
-
- </table>
+               </div>
 
 
 
-
-
-<?php	} ?>
-
-
-
-    </div>
+       </div>
 
 
 </div>

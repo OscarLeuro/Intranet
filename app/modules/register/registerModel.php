@@ -9,11 +9,11 @@ class registerModel{
     
 
 
-    public function Create($action){
-        
-        include 'app/lib/config/connect.php';
+    public function Create($action)
+    
+    {include 'app/lib/config/connect.php';
 
-        if($action == 'crear'){
+    if($action == 'crear'){
 
 
             $user = $_POST['prueba'];
@@ -21,12 +21,16 @@ class registerModel{
             $sql = "INSERT INTO prueba(USER) VALUES('$user')";
             mysqli_query($connect,$sql);}
 
-            }
+    }
+    
+
     
     
     
     
-    public function Read($id){
+
+
+public function Read($id){
     include 'app/lib/config/connect.php';
 
 
@@ -44,17 +48,17 @@ class registerModel{
 
 
 
-    public function Edit($id){
+    public function Edit($id,$data){
 
         include 'app/lib/config/connect.php';
       
         
 
-        $SQL  = "SELECT * FROM prueba WHERE ID = '$id'";
+        $SQL  = "UPDATE prueba SET USER = '$USER' WHERE ID = '$id'";
 
-        $QUERY = mysqli_query($connect, $SQL);
+        mysqli_query($connect, $SQL);
 
-        return $QUERY;
+        
 
 
     }

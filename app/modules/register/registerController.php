@@ -1,8 +1,9 @@
 <?php
 
 
+
     include 'registerModel.php';
-    require 'app/lib/session.php';
+    include 'app/lib/session.php';
     include 'app/lib/actions.php';
    
     
@@ -24,13 +25,13 @@
 
             }
 
-            elseif($action == 'editar'){
+         /**   elseif($action == 'editar'){
 
                 include 'app/lib/session.php';
                 return registerModel::Edit($id);
+            } */
 
-
-            }
+            
             elseif($action == 'eliminar'){
 
               
@@ -38,13 +39,7 @@
 
 
             }
-            elseif($action == 'guardar'){
-
-                include 'app/lib/session.php';
-                return registerModel::Edit($id);
-
-
-            }
+    
             
 
             
