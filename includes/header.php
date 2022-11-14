@@ -37,4 +37,10 @@ require 'app/lib/getRoute.php';
 
     <a href="dashboard" class="btn <?php activeLink($url,'dashboard') ?>">Dashboard</a>
 
+
+    <a href="dietas" class="btn <?php activeLink($url, 'dietas') ?>"> Dietas</a>
+
+
+    <a href="alimentos" class="btn <?php activeLink($url, 'alimentos')  ?>">Alimentos</a>
+
 </nav>

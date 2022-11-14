@@ -49,9 +49,9 @@
              <td><form action="modal.php" method="POST" id="action_form">
 
                 <input type="hidden" name="action" value="Editar" >
-                <input type="hidden" name="ID" value="<?=$row['ID']?>" id="id_value">
+                <input type="hidden" name="ID" value="<?=$row['ID']?>" class="id_value">
 
-                <input type="submit" value="Editar" class="editModal">
+                <input type="submit" value="Editar" class="editModal" onclick="edit(event,<?=$row['ID']?>)">
 
              </form>
 

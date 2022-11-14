@@ -1,9 +1,7 @@
 
-var form_edit = $('#action_form');
 
 
-
-$('.editModal')[0].addEventListener('click', function(e){
+function edit(e, id){
 
 
     e.preventDefault()
@@ -12,7 +10,7 @@ $('.editModal')[0].addEventListener('click', function(e){
 
 var container = document.getElementById('container_ajax');
 
-var info = document.getElementById('id_value').value;
+var info = id;
 
 var XHR = new XMLHttpRequest();
 
@@ -31,16 +29,34 @@ container.innerHTML = data;
 
 })
  
-    $('.modal')[0].style.transform = "scale(100%)"
 
-   
-});
+$('.modal')[0].style.transform = "scale(100%)" ;
+
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 $('.modal__close')[0].addEventListener('click', function(){
 
 
     $('.modal')[0].style.transform = "scale(0%)";
+
+    window.location.href = 'http://localhost/Intranet/register';
 
 
 

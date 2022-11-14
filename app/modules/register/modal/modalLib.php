@@ -17,7 +17,7 @@ class ModalInfo{
         $SQL = "SELECT * FROM prueba WHERE ID = '$id'";
 
     } 
-    else{$SQL = 'SELECT * FROM prueba ORDER BY ID DESC';}
+    
   
     
     $QUERY = mysqli_query($connect,$SQL);
@@ -36,6 +36,7 @@ class ModalInfo{
 
         mysqli_query($connect, $SQL);
 
+        echo 'Registro Editado';
        
 
 
@@ -62,7 +63,7 @@ if(isset($_POST['data'])){
 
 }
 
-echo 'Registro Editado';
+
 
 
 

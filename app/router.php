@@ -7,7 +7,7 @@
 
 class Router{
 
-    public $URL = "hola";
+   
         public function __construct()
         {
          
