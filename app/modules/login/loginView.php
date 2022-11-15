@@ -4,6 +4,7 @@
 
     include 'loginController.php';
 
+    loginController::login();
     $data = loginController::data();
 
 
@@ -17,11 +18,11 @@
 
 <div class="c4">
 
-<form action="">
+<form action="login">
 
     <div class="input-group-column">
 
-    <label for="">Usuariosasa:</label>
+    <label for="">Usuarios:</label>
     <input type="text">
 
     </div>

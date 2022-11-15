@@ -10,19 +10,11 @@
 
     class registerController{
 
-
-  
-
         public function action($action){
 
-          
             if($action =='crear'){
-
                 header('Location:register');
                 return registerModel::Create($action);
-
-                
-
             }
 
          /**   elseif($action == 'editar'){
